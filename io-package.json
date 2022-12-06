@@ -1,0 +1,101 @@
+{
+	"common": {
+		"name": "ecodata-powerdog",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Powerdog",
+		"titleLang": {
+			"en": "Powerdog",
+			"de": "Krafthund",
+			"ru": "Powerdog",
+			"pt": "Powerdog",
+			"nl": "Powerhond",
+			"fr": "Chien de puissance",
+			"it": "Powerdog",
+			"es": "Perro de poder",
+			"pl": "Powerdog",
+			"zh-cn": "动力狗"
+		},
+		"desc": {
+			"en": "Integration of ecodata Powerdog devices",
+			"de": "Integration von ecodata Powerdog Geräten",
+			"ru": "Интеграция устройств Ecodata Powerdog",
+			"pt": "Integração de dispositivos ecodata Powerdog",
+			"nl": "Integratie van ecodata Powerdog-apparaten",
+			"fr": "Intégration des appareils ecodata Powerdog",
+			"it": "Integrazione dei dispositivi ecodata Powerdog",
+			"es": "Integración de dispositivos ecodata Powerdog",
+			"pl": "Integracja urządzeń ecodata Powerdog",
+			"zh-cn": "集成 ecodata Powerdog 设备"
+		},
+		"authors": ["Joachim Schmalz <joe.dev0001@gmail.com>"],
+		"keywords": ["ecodata", "Powerdog", "iot"],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "ecodata-powerdog.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/JoeSchDev/ioBroker.ecodata-powerdog/main/admin/ecodata-powerdog.png",
+		"readme": "https://github.com/JoeSchDev/ioBroker.ecodata-powerdog/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "iot-systems",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.1.13"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
